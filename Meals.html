@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الوجبات - Meals.html</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <img src="logo.png" class="logo-top-right">
+    <img src="seafood.png" class="logo-top-left">
+
+    <nav>
+        <a href="home.html">الرئيسية</a> | 
+        <a href="AboutUs.html">من نحن</a> | 
+        <a href="Meals.html">الوجبات</a>
+    </nav>
+
+    <h1>قائمة الوجبات البحرية</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>الرمز</th>
+                <th>الوجبة</th>
+                <th>السعر</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+    <td>SF-001</td>
+    <td>سمك بوري مشوي</td>
+    <td>110000 ل.س</td>
+    <td><input type="checkbox" onclick="toggleDetails(this, 'details1')"></td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr id="details1" style="display:none; background-color: #fafafa;">
+    <td colspan="5">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px;">
+            <img src="fish.jpg" style="width: 150px; border-radius: 10px; border: 1px solid #ddd;">
+            <p><b>المكونات:</b> سمك بوري طازج، ثوم، زيت زيتون، ليمون، وأعشاب برية.</p>
+        </div>
+    </td>
+</tr>
+
+            <tr>
+    <td>SF-002</td>
+    <td>روبيان مشوي</td>
+    <td>150000 ل.س</td>
+    <td><input type="checkbox" onclick="toggleDetails(this, 'details2')"></td>
+    <td><input type="checkbox"></td>
+</tr>
+<tr id="details2" style="display:none; background-color: #fafafa;">
+    <td colspan="5">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px;">
+            <img src="robian.jpg" style="width: 150px; border-radius: 10px; border: 1px solid #ddd;">
+            <p><b>المكونات:</b> روبيان جامبو، زبدة طبيعية، ثوم، صوص حار وكزبرة.</p>
+        </div>
+    </td>
+</tr>
+            <td>SF-003</td>
+            <td>فيليه سمك مقلي</td>
+            <td>95000 ل.س</td>
+            <td><input type="checkbox" onclick="toggleDetails(this, 'details3')"></td>
+            <td><input type="checkbox" class="meal-check" value="95000"></td>
+        </tr>
+        <tr id="details3" style="display:none; background-color: #fafafa;">
+            <td colspan="5">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px;">
+                    <img src="fish2.jpg" style="width: 150px; border-radius: 10px; border: 1px solid #ddd;">
+                    <p><b>المكونات:</b> شرائح فيليه سمك، تتبيلة مقرمشة، بهارات سمك خاصة، وليمون.</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>SF-004</td>
+            <td>سلطة مأكولات بحرية</td>
+            <td>60000 ل.س</td>
+            <td><input type="checkbox" onclick="toggleDetails(this, 'details4')"></td>
+            <td><input type="checkbox" class="meal-check" value="60000"></td>
+        </tr>
+        <tr id="details4" style="display:none; background-color: #fafafa;">
+            <td colspan="5">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px;">
+                    <img src="salad.jpg" style="width: 150px; border-radius: 10px; border: 1px solid #ddd;">
+                    <p><b>المكونات:</b> قطع حبار وروبيان، خس طازج، ذرة، صوص كوكتيل مميز.</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>SF-005</td>
+            <td>شوربة بحرية بالكريمة</td>
+            <td>45000 ل.س</td>
+            <td><input type="checkbox" onclick="toggleDetails(this, 'details5')"></td>
+            <td><input type="checkbox" class="meal-check" value="45000"></td>
+        </tr>
+        <tr id="details5" style="display:none; background-color: #fafafa;">
+            <td colspan="5">
+                <div style="display: flex; align-items: center; justify-content: center; gap: 20px; padding: 10px;">
+                    <img src="soup.jpg" style="width: 150px; border-radius: 10px; border: 1px solid #ddd;">
+                    <p><b>المكونات:</b> كريمة طبخ غنية، قطع متنوعة من فواكه البحر، وبصل أخضر.</p>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    
+    <button onclick="showForm()">متابعة</button>
+
+    <div id="formSection" style="display:none; margin-top:30px;">
+        <h3>إتمام الطلب</h3>
+        <form onsubmit="return checkData()">
+            <label>الاسم الكامل (English):</label><br>
+            <input type="text" id="name"><br>
+            
+            <label>رقم الحساب المصرفي (6 خانات):</label><br>
+            <input type="text" id="account" required><br>
+            
+            <label>رقم الموبايل:</label><br>
+            <input type="text" id="phone" placeholder="09xxxxxxxx"><br>
+            
+            <label>تاريخ الطلب:</label><br>
+            <input type="text" id="date" placeholder="dd-mm-yyyy"><br><br>
+            
+            <input type="submit" value="إرسال الطلب">
+        </form>
+    </div>
+
+    <script src="myFunctions.js"></script>
+</body>
+</html>

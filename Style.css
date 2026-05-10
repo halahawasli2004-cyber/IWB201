@@ -1,0 +1,187 @@
+/* تنسيقات الخطوط والألوان من مكان واحد كما هو مطلوب [67, 68] */
+body {
+    font-family: cairo, sans-serif;
+    direction: rtl;
+    text-align: center;
+    margin: 18px;
+}
+
+
+body::before {
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    
+    /* إعدادات الصورة */
+    background-image: url('background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0.3; 
+}
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 90%;
+    background-color: white;
+}
+
+th, td {
+    border: 0.5px solid #665f5f;
+    padding: 10px;
+}
+
+th {
+    background-color: #ddd;
+}
+
+.id {
+    color: rgb(16, 42, 175);
+    font-weight: bold;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: rgb(110, 160, 221);
+    text-decoration: none;
+   font-weight: bold;
+    margin: 0 30px;
+    display: inline-block; /* ليكونوا بجانب بعضهم */
+}
+
+.deploy-link {
+    font-size: 20px;
+    color: rgb(18, 26, 92);
+    display: block;
+    margin: 24px;
+} 
+/* تنسيق قسم الأيقونات */
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.social-icons img:hover {
+    transform: scale(1.1); 
+}
+
+/* تنسيق اللوغو اليميني */
+.logo-top-right {
+    position: absolute; 
+    top: 20px;        
+    right: 28px;     
+    height: auto;
+}
+
+/* تنسيق اللوغو اليساري */
+.logo-top-left {
+    position: absolute; 
+    top: 20px;         
+    left: 28px;      
+    height: auto;
+}
+
+
+
+
+/* إخفاء التفاصيل */
+.details-row {
+    display: none;
+    background-color: #fafafa;
+}
+
+/* تنسيق التفاصيل  */
+.details-content {
+    text-align: right;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+}
+
+/* تحديد حجم صورة الوجبة  */
+.details-content img {
+    max-width: 150px;
+    height: auto;
+    border: 1px solid #ddd;
+}
+
+.ingredients {
+    flex-grow: 1;
+    text-align: right;
+}
+
+/* تنسيق قائمة المكونات */
+.ingredients ul {
+    list-style-type: disc;
+    padding-right: 20px;
+    margin: 5px 0;
+}
+
+/*  زر المتابعة */
+.btn-container {
+    text-align: right;
+    margin: 20px 5%;
+}
+
+/* تنسيق زر المتابعة */
+.btn-submit {
+    background-color: #f0ad4e;
+    border: 1px solid #eea236;
+    color: white;
+    padding: 10px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* تنسيق حقول الإدخال والأزرار من مكان واحد  */
+input[type="text"], input[type="submit"] {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #2c3e50;
+    font-family: Arial, sans-serif; 
+}
+
+input[type="submit"] {
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+/* تنسيق صور الوجبات لضمان الحجم الصغير */
+.meal-img {
+    width: 60px; /* حجم صغير ومناسب للجدول */
+    height: auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    display: inline-block;
+}
+/* تنسيق اللوغو اليميني (جامعة SVU) */
+.logo-top-right {
+    position: absolute; 
+    top: 18px;        
+    right: 30px;     
+    width: 80px; /* قومي بتغيير هذا الرقم لتكبير أو تصغير اللوغو اليميني */
+    height: auto; /* للحفاظ على أبعاد الصورة */
+}
+
+/* تنسيق اللوغو اليساري (شعار المطعم) */
+.logo-top-left {
+    position: absolute; 
+    top: 25px;         
+    left: 30px;      
+    width: 50px; /* قومي بتغيير هذا الرقم لتكبير أو تصغير اللوغو اليساري */
+    height: auto; /* للحفاظ على أبعاد الصورة */
+}
